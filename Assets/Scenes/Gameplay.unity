@@ -4176,6 +4176,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1202684818 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 887172439748765757, guid: 616257ff16f3c844e82a21be33f3d3b0, type: 3}
+  m_PrefabInstance: {fileID: 2387144765579166004}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1210702101
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,6 +6598,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6367845083003160073, guid: 616257ff16f3c844e82a21be33f3d3b0, type: 3}
+      propertyPath: myBody
+      value: 
+      objectReference: {fileID: 1202684818}
     - target: {fileID: 7358488128100031810, guid: 616257ff16f3c844e82a21be33f3d3b0, type: 3}
       propertyPath: m_Name
       value: Player 1
