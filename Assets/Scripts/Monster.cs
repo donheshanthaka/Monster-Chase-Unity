@@ -11,12 +11,10 @@ public class Monster : MonoBehaviour
     private Rigidbody2D myBody;
 
     // Awake is called when the script instance is being loaded
-    private void Awake()
+    void Awake()
     {
         // Getting a reference to the RigidBody
         myBody = GetComponent<Rigidbody2D>();
-
-        speed = 2;
     }
 
 
