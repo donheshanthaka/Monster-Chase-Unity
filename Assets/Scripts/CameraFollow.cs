@@ -21,6 +21,12 @@ public class CameraFollow : MonoBehaviour
     // LateUpdate is called once all calculations of the other Update methods are finished, Ex: after player movement calculation
     void LateUpdate()
     {
+        // if player is null
+        if (!player)
+        {
+            return;
+        }
+
         // Getting the current position of the camera
         // The transform component below is not defined by us because, it is already defined as an attribute for the class that we are in right now
         // We had to define the transform component for the player, because we are calling that object through find tag method
