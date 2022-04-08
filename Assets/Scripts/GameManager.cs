@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    // Singleton
     // This variable holds an instance for this class, this GameManager class can call its own methods inside the class
     public static GameManager instance;
 
@@ -19,22 +20,19 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        // Sets the instance variable to the current instance
+        // Sets the instance variable to an instance of this class
         if (instance == null)
         {
             instance = this;
+            // The below line makes sure that the game object will not get destroyed during loading
+            // That means the GameManager object will stay when moving from the main menu to the game play
+            DontDestroyOnLoad(gameObject);
+        } else
+        {
+            // If the instance already exist, the duplicate will be destroyed
+            Destroy(gameObject);
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 } // class
