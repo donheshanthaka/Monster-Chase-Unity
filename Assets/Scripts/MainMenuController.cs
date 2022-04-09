@@ -14,6 +14,6 @@ public class MainMenuController : MonoBehaviour
         GameManager.instance.CharIndex = selectedCharacter;
 
         // The scene manager will start playing the scene that correspond to the string passed in
-        //SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("Gameplay");
     }
 } // class

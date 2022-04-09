@@ -46,7 +46,7 @@ public class MonsterSpawner : MonoBehaviour
                 // left side
                 spawnedMonster.transform.position = leftPos.position;
                 // Getting the monster component from the spawned monster and setting it a random speed
-                spawnedMonster.GetComponent<Monster>().speed = Random.Range(4, 10);
+                spawnedMonster.GetComponent<Monster>().speed = Random.Range(2, 4);
             }
             else
             {
@@ -54,7 +54,7 @@ public class MonsterSpawner : MonoBehaviour
                 spawnedMonster.transform.position = rightPos.position;
                 // Getting the monster component from the spawned monster and setting it a random speed
                 // The value is negated to move the character from right to left
-                spawnedMonster.GetComponent<Monster>().speed = -Random.Range(4, 10);
+                spawnedMonster.GetComponent<Monster>().speed = -Random.Range(2, 4);
                 // The first value is negated because the default orientation of the object would be facing right,
                 // ...since this enemy is moving from right to left it should be facing left side, which is achieved using the negation
                 spawnedMonster.transform.localScale = new Vector3(-1f, 1f, 1f);
